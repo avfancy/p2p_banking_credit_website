@@ -36,7 +36,7 @@
     <!-- 引入bootstrap.js -->
     <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
     <!-- 引入js -->
-    <script src="./src/js/index.js"></script>
+    <script src="./dist/js/index.min.js"></script>
 
 </body>
 

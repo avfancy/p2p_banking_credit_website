@@ -7,6 +7,8 @@
     <title>p2p金融借贷网站</title>
     <!-- 引入bootstrap样式 -->
     <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <!-- 引入bootstrapValidator.css -->
+    <link rel="stylesheet" href="./lib/bootstrapValidator/css/bootstrapValidator.min.css">
     <!-- 引入自定义less压缩css -->
     <link rel="stylesheet" href="./dist/css/minCss/regLogin.min.css">
 </head>
@@ -40,7 +42,7 @@
             </div>
             <div class="panel-body">
                 <p>请输入用户名和密码</p>
-                <form class="form-horizontal">
+                <form id="regForm" class="form-horizontal">
                     <div class="form-group">
                         <label for="inputEmail3" class="col-sm-3 control-label">用户名</label>
                         <div class="col-sm-9">
@@ -76,8 +78,13 @@
     <script src="./lib/jquery/jquery.min.js"></script>
     <!-- 引入bootstrap.js -->
     <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+    <!-- 引入bootstrapValidator.js -->
+    <script src="./lib/bootstrapValidator/js/bootstrapValidator.min.js"></script>
     <!-- 引入js -->
-    <script src="./src/js/index.js"></script>
+    <script src="./dist/js/index.min.js"></script>
+    <!-- 引入表单验证js -->
+    <script src="./dist/js/formVlidator.min.js"></script>
+
 
 </body>
 

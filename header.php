@@ -17,16 +17,16 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <ul class="nav navbar-nav">
             <li class="active">
-                <a href="#">首页</a>
+                <a href="./index.php">首页</a>
             </li>
             <li>
-                <a href="#">我要投资</a>
+                <a href="./invest.php">我要投资</a>
             </li>
             <li>
                 <a href="#">我要借款</a>
             </li>
             <li>
-                <a href="#">个人中心</a>
+                <a href="./personalCenter.php">个人中心</a>
             </li>
             <li>
                 <a href="#">新手指引</a>
