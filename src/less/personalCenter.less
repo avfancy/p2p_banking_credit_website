@@ -1,0 +1,108 @@
+/* 引入左侧导航样式 */
+@import url("./commonNavList.less");
+
+/* 定义右侧主体内容样式 */
+#centerCont{
+    #btnOff{
+        display: none;
+    }
+    .col-sm-9{
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        .panel-default{
+            .panel-heading{
+                height: 120px;
+                img{
+                    width: 90px;
+                    height: 90px;
+                    margin-top: 10px;
+                    border: 1px solid #ccc;
+                }
+                .panel-title{
+                    margin-left: 20px;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}
+
+#centerCont .panel-default .panel-body{
+    .cash{
+        div{
+            font-size: 18px;
+            margin: 20px 0px;
+            span{
+                color: #337ab7;
+            }
+        }
+    }
+    .contBtn{
+     text-align: center;   
+    }
+    .msgList .col-sm-4{
+        margin: 20px 0px;
+        .essay{
+            .auth{
+                font-weight: bold;
+            }
+        }
+        
+    }
+}
+
+.middleCont{
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+/* 单独定义超小屏样式 */
+@media all and(max-width:768px){
+    #centerCont{
+        position: relative;
+        height:900px;
+        overflow-x: hidden;
+        left: 0px;//列表打开
+        transition: all 1s;
+        .leftCont{
+            position: absolute;
+            left: 0px;
+        }
+        .rightCont{
+            position: absolute;
+            right: -50%;
+            #btnOff{
+                position: absolute;
+                left: 0px;
+                display: inline-block;
+            }
+        }
+    }
+    #centerCont.active{
+        left: -50%;//列表隐藏
+        overflow-x: visible;
+    }
+};
+
+
+
+
+//借款申请表单样式
+.el-tip-info{
+    padding:20px;
+    background-color: #F4F8FA;
+    border-left: 2px solid #0099DD;
+    margin-bottom: 20px;
+}
+.el-tip-info h3{
+    color:#09d;
+}
+
+#borrowForm{
+    width: 60%;
+    margin: 0px auto;
+}
+
+
+
+

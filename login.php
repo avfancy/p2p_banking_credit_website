@@ -42,7 +42,7 @@
             </div>
             <div class="panel-body">
                 <p>请输入用户名和密码</p>
-                <form id="regForm" class="form-horizontal">
+                <form id="loginForm" class="form-horizontal">
                     <div class="form-group">
                         <label for="inputEmail3" class="col-sm-3 control-label">用户名</label>
                         <div class="col-sm-9">
@@ -73,6 +73,26 @@
         require_once("footer.php");
     ?>
 
+    <!-- 蒙层的html结构 -->
+    <!-- Modal -->
+    <div class="modal fade" id="msgShowModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="msgShowTitle">标题</h4>
+        </div>
+        <div class="modal-body" id="msgShowContent">
+            内容
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">关闭窗口</button>
+        </div>
+        </div>
+    </div>
+    </div>
+
+
 
     <!-- 引入jquery.js -->
     <script src="./lib/jquery/jquery.min.js"></script>
@@ -83,7 +103,8 @@
     <!-- 引入js -->
     <script src="./dist/js/index.min.js"></script>
     <!-- 引入表单验证js -->
-    <script src="./dist/js/formVlidator.min.js"></script>
+    <!-- <script src="./dist/js/formVlidator.min.js"></script> -->
+    <script src="./src/js/formVlidator.js"></script>
 
 
 </body>

@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="./dist/css/minCss/index.min.css">
     <!-- 引入我要投资样式 -->
     <link rel="stylesheet" href="./dist/css/minCss/invest.min.css">
+    <!-- 引入分页样式 -->
+    <link rel="stylesheet" href="./lib/JqueryPagination/jquery.pagination.css">
 </head>
 
 <body>
@@ -45,29 +47,15 @@
                         <th>操作</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td>张三</td>
-                        <td class="titleList">给我2000度过难关</td>
-                        <td>10.00%</td>
-                        <td>2,000.00</td>
-                        <td class="titleList">按月分期还款</td>
-                        <td>78.00%</td>
-                        <td> <button type="button" class="btn btn-danger btn-sm">查看</button></td>
-                    </tr>
-                    <tr>
-                        <td>张三</td>
-                        <td class="titleList">给我2000度过难关</td>
-                        <td>10.00%</td>
-                        <td>2,000.00</td>
-                        <td class="titleList">按月分期还款</td>
-                        <td>78.00%</td>
-                        <td> <button type="button" class="btn btn-danger btn-sm">查看</button></td>
-                    </tr>
+                <tbody id="investData">
+                   
                 </tbody>
             </table>
         </div>
-
+        <!-- 分页 -->
+            <section id="demo">
+                <div id="page" class="m-pagination"></div>
+            </section>
     </div>
 
     <!-- 模板的内容结尾 -->
@@ -80,10 +68,29 @@
 
     <!-- 引入jquery.js -->
     <script src="./lib/jquery/jquery.min.js"></script>
+    <!-- 引入jquery分页插件js -->
+    <script src="./lib/JqueryPagination/jquery.pagination-1.2.7.min.js"></script>
+    <!-- 引入jqueryTmpl模板 -->
+    <script src="./lib/jqueryTemplate/jquery.tmpl.js"></script>
     <!-- 引入bootstrap.js -->
     <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
     <!-- 引入js -->
     <script src="./dist/js/index.min.js"></script>
+    <!-- 引入invest.js -->
+    <script src="./dist/js/invest.min.js"></script>
+
+    <!-- 定义模板，渲染数据 -->
+    <script id="investTmpl" type="text/html">
+        <tr>
+            <td>张三</td>
+            <td>${borrowTitle}</td>
+            <td>${currentRate}</td>
+            <td>${borrowAmount}</td>
+            <td>${repayment}</td>
+            <td>78.00%</td>
+            <td><button type="button" class="btn btn-danger btn-sm">查看</button></td>
+        </tr> 
+    </script>
 
 </body>
 

@@ -1,0 +1,52 @@
+/* borrow_list样式定义 */
+#centerCont{
+    .panel-default{
+        border: 1px solid #ccc;
+        padding: 0px;
+    }
+    #btnOff{
+        display: none;
+    }
+    .rightCont{
+        .panel-heading{
+            background-color: #f5f5f5;
+            .panel-title{
+                line-height: 54px;
+                padding-left: 30px;
+            }
+        }
+    }
+}
+
+
+
+
+/* 单独定义超小屏样式 */
+@media all and(max-width:768px){
+    #centerCont{
+        position: relative;
+        height:900px;
+        overflow-x: hidden;
+        left: 0px;//列表打开
+        transition: all 1s;
+        .leftCont{
+            position: absolute;
+            left: 0px;
+        }
+        .rightCont{
+            position: absolute;
+            right: -50%;
+            #btnOff{
+                position: absolute;
+                left: 0px;
+                display: inline-block;
+            }
+        }
+    }
+    #centerCont.active{
+        left: -50%;//列表隐藏
+        overflow-x: visible;
+    }
+};
+
+

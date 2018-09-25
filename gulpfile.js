@@ -14,6 +14,9 @@ var cleanCss=require("gulp-clean-css");
 //引入热刷新模块
 var livereload=require("gulp-livereload");
 
+//引入babel模块,编译es6
+//var babel=require("gulp-babel");
+
 //配置less任务
 gulp.task("lessTask",function () {
     gulp.src('./src/less/*.less') //源文件
@@ -43,6 +46,9 @@ gulp.task("lessTask",function () {
 //配置js压缩任务
 gulp.task("uglifyJS",function () {
     gulp.src('./src/js/*.js') //源文件
+        /* .pipe(babel({
+            presets:['@bable/env']
+        })) */
         .pipe(uglify()) //插件方法调用
         .pipe(rename(function (path) {
             path.basename += ".min"; //文件名： 原来的文件名+新增的文件
